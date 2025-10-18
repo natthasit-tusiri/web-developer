@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Itim&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Damage Formura</title>
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="left-side" id="left"></div>
+        
+        <div class="main">
+
+            <nav id="navbar"></nav>
+
+            <div class="contents">
+                <div class="blue-bg"><h1>Guide</h1><p>อัพเดทเมื่อวันที่ 13 ตุลาคม 2025</p></div><br><br><br><br><br><br>
+                <h2>NOTE</h2><hr class="hr-normal">
+                <ul>
+                    <li class="itim-regular" style="font-size: 20px;margin-left:20px;">10 พลัง เพิ่มดาเมจจากสเตตัสพลังโจมตีพื้นฐาน 1%</li>
+                    <li class="itim-regular" style="font-size: 20px;margin-left:20px;">11  สเตตัสธาตุ ดาเมจธาตุเพิ่มขึ้น 5%</li>
+                    <li class="itim-regular" style="font-size: 20px;margin-left:20px;">ทุกการเพิ่มดาเมจ จะถูกนับรวมเข้าในสเตตัส ดาเมจเพิ่มขึ้น</li>
+                    <li class="itim-regular" style="font-size: 20px;margin-left:20px;">สเตตัสที่เพิ่มดาเมจ</li>
+                    <li class="itim-regular" style="font-size: 20px;margin-left:20px;">ทุกการคำนวณแต่ละสเตตัสจะสมมติให้อัตราคริติคอลเป็น 100% เพื่อป้องกันการคลาดเคลื่อน</li>
+                    <li class="itim-regular" style="font-size: 20px;margin-left:20px;">สเตตัสป้องกัน ผู้เล่นและศัตรูใช้สูตรเหมือนกัน</li>
+                </ul>
+
+                <div class="cal-container" style="margin-top: 130px;">
+
+                    <h3>Actual Attack</h3>
+                   <div class="cal-elm">
+                        <p style="padding-bottom: 20px;">พลังโจมตีพื้นฐาน</p>
+                        <input type="number"id="atk" placeholder="พลังโจมตี" style='width:45%;margin-right:10px'>
+                        <input type="number"id="str" placeholder="พลัง" style='width:45%'><br>
+                        <button class="cal-button" id="button-base-atk" type="button">ยืนยัน</button>
+                        <span class="cal-result" id="base-atk-result"></span>
+                   </div>
+
+                    <div class="cal-elm">
+                        <p style="padding-bottom: 20px;">พลังโจมตี %</p>
+                        <input type="number"id="total-atk" placeholder="พลังโจมตี" style='width:45%;margin-right:10px'>
+                        <input type="number"id="atk-increase" placeholder="เพิ่มขึ้น %" style='width:45%'><br>
+                        <button class="cal-button" id="atk-increase-button" type="button">ยืนยัน</button>
+                        <span class="cal-result" id="atk-increase-result"></span>
+                   </div>
+
+
+                    <div class="cal-elm">
+                        <p style="padding-bottom: 20px;">พลัง</p>
+                        <input type="number"id="total-str" placeholder="พื้นฐาน" style='width:45%;margin-right:10px'>
+                        <input type="number"id="str-increase" placeholder="เพิ่มขึ้น" style='width:45%'><br>
+                        <button class="cal-button" id="str-increase-button" type="button">ยืนยัน</button>
+                        <span class="cal-result" id="str-increase-result"></span>
+                   </div>
+
+                    <div class="cal-elm">
+                        <p style="padding-bottom: 20px;">เจาะเกราะ</p>
+                        <input type="number"id="pen" placeholder="พื้นฐาน" style='width:45%;margin-right:10px'>
+                        <input type="number"id="pen-increase" placeholder="เพิ่มขึ้น" style='width:45%'><br>
+                        <button class="cal-button" id="pen-increase-button" type="button">ยืนยัน</button>
+                        <span class="cal-result" id="pen-increase-result"></span>
+                   </div>
+
+                    <div class="cal-elm">
+                        <p style="padding-bottom: 20px;">ทลายเกราะป้องกัน</p>
+                        <input type="number"id="shred" placeholder="พื้นฐาน" style='width:45%;margin-right:10px'>
+                        <input type="number"id="shred-increase" placeholder="เพิ่มขึ้น" style='width:45%'><br>
+                        <button class="cal-button" id="shred-increase-button" type="button">ยืนยัน</button>
+                        <span class="cal-result" id="shred-increase-result"></span>
+                   </div>
+
+                    <div class="cal-elm">
+                        <p style="padding-bottom: 20px;">พลังป้องกัน</p>
+                        <input type="number"id="def" placeholder="พื้นฐาน" style='width:45%;margin-right:10px'>
+                        <input type="number"id="def-increase" placeholder="เพิ่มขึ้น" style='width:45%'><br>
+                        <button class="cal-button" id="def-increase-button" type="button">ยืนยัน</button>
+                        <span class="cal-result" id="def-increase-result"></span>
+                   </div>
+
+
+
+                    <h3 style="margin-top: 80px;">Individual Multipliers</h3>
+                    <div class="cal-elm">
+                        <p style="padding-bottom: 20px;">คริติคอลดาเมจ</p>
+                        <input type="number"id="critdmg" placeholder="คริติคอลดาเมจ" style='width:45%;margin-right:10px'>
+                        <input type="number"id="critdmg-increase" placeholder="เพิ่มขึ้น %" style='width:45%'><br>
+                        <button class="cal-button" id="critdmg-increase-button" type="button">ยืนยัน</button>
+                        <span class="cal-result" id="critdmg-increase-result"></span>
+                   </div>
+
+                    <div class="cal-elm">
+                        <p style="padding-bottom: 20px;">สเตตัสธาตุ</p>
+                        <input type="number"id="elemental" placeholder="สเตตัสธาตุ" style='width:45%;margin-right:10px'>
+                        <input type="number"id="elemental-increase" placeholder="เพิ่มขึ้น" style='width:45%'><br>
+                        <button class="cal-button" id="elemental-increase-button" type="button">ยืนยัน</button>
+                        <span class="cal-result" id="elemental-increase-result"></span>
+                   </div>
+
+                    <div class="cal-elm">
+                        <p style="padding-bottom: 20px;">ดาเมจสกิล</p>
+                        <input type="number"id="skilldmg" placeholder="ดาเมจสกิล" style='width:45%;margin-right:10px'>
+                        <input type="number"id="skilldmg-increase" placeholder="เพิ่มขึ้น %" style='width:45%'><br>
+                        <button class="cal-button" id="skilldmg-increase-button" type="button">ยืนยัน</button>
+                        <span class="cal-result" id="skilldmg-increase-result"></span>
+                   </div>
+
+                    <div class="cal-elm">
+                        <p style="padding-bottom: 20px;">ดาเมจโบนัส</p>
+                        <input type="number"id="dmgbonus" placeholder="ดาเมจโบนัส" style='width:45%;margin-right:10px'>
+                        <input type="number"id="dmgbonus-increase" placeholder="เพิ่มขึ้น %" style='width:45%'><br>
+                        <button class="cal-button" id="dmgbonus-increase-button" type="button">ยืนยัน</button>
+                        <span class="cal-result" id="dmgbonus-increase-result"></span>
+                   </div>
+
+
+                    <div class="cal-elm">
+                        <p style="padding-bottom: 20px;">ดาเมจต่อบอส</p>
+                        <input type="number"id="dmg-to-boss" placeholder="ดาเมจต่อบอส" style='width:45%;margin-right:10px'>
+                        <input type="number"id="dmg-to-boss-increase" placeholder="เพิ่มขึ้น %" style='width:45%'><br>
+                        <button class="cal-button" id="dmg-to-boss-increase-button" type="button">ยืนยัน</button>
+                        <span class="cal-result" id="dmg-to-boss-increase-result"></span>
+                   </div>
+
+
+
+
+
+                    <h3 style="margin-top: 80px;">Situational Damage</h3>
+
+                    <div class="cal-elm">
+                        <p style="padding-bottom: 20px;">ดาเมจต่อเกราะบอสแตก (ค่าเริ่มต้นอยู่ที่ 30%)</p>
+                        <input type="number"id="shield-break" placeholder="ดาเมจต่อเกราะบอสแตก" style='width:45%;margin-right:10px'>
+                        <input type="number"id="shield-break-increase" placeholder="เพิ่มขึ้น %" style='width:45%'><br>
+                        <button class="cal-button" id="shield-break-increase-button" type="button">ยืนยัน</button>
+                        <span class="cal-result" id="shield-break-increase-result"></span>
+                   </div>
+
+                    <div class="cal-elm">
+                        <p style="padding-bottom: 20px;">ดาเมจเมื่อประสานพลัง (ค่าเริ่มต้นอยู่ที่ 30%)</p>
+                        <input type="number"id="resonance" placeholder="ดาเมจเมื่อประสานพลัง" style='width:45%;margin-right:10px'>
+                        <input type="number"id="resonance-increase" placeholder="เพิ่มขึ้น %" style='width:45%'><br>
+                        <button class="cal-button" id="resonance-increase-button" type="button">ยืนยัน</button>
+                        <span class="cal-result" id="resonance-increase-result"></span>
+                   </div>
+
+                    <div class="cal-elm">
+                        <p style="padding-bottom: 20px;">ดาเมจต่อศัตรูที่ติดดีบัฟ </p>
+                        <input type="number"id="dmg-to-debuff" placeholder="ดาเมจต่อศัตรูที่ติดดีบัฟ" style='width:45%;margin-right:10px'>
+                        <input type="number"id="dmg-to-debuff-increase" placeholder="เพิ่มขึ้น %" style='width:45%'><br>
+                        <button class="cal-button" id="dmg-to-debuff-increase-button" type="button">ยืนยัน</button>
+                        <span class="cal-result" id="dmg-to-debuff-increase-result"></span>
+                   </div>
+
+
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+    <script>window.onload = (()=>{nav();sidemenu();statusCalculator()})</script>
+</body>
+</html>

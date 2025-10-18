@@ -1,0 +1,206 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+
+
+html,body{
+    overflow-x: hidden;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1,h2,h3{color: white;}
+h3{font-size: 27px;color:  rgb(228, 200, 42); margin-bottom: 20px;}
+a{text-decoration:none;}
+p{ color:white;font-size: large;}
+.p-medium{
+    font-size: 16;
+}
+.right-space{padding-right: 50px;}
+.top-space{padding-top: 90px;}
+hr{margin-bottom: 40px; background-color: rgb(43, 126, 126);margin-top: 5px;}
+.hr-normal{
+    color: aliceblue;
+}
+li{ color:aliceblue; padding-top:5px;}
+::placeholder{
+    color: gray;
+}
+input{
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+}
+
+
+
+
+.container{
+    display: flex;
+    gap: 2px;
+    height: 100vh;
+    max-width: 100%;
+}
+
+.left-side{
+    background-color: rgb(13, 14, 14);
+    overflow-y: auto;
+    padding-left: 2%;
+    padding-top:20px;
+    width:20%
+    
+}
+
+
+.main{
+    background-color: rgb(34, 34, 34);
+    flex:1;
+    overflow-y: auto;
+    height: 100vh;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+
+
+}
+
+
+
+
+
+nav{
+    background-color: rgb(13, 14, 14);
+    padding-top: 15px;
+    padding-bottom:15px;
+    display:flex;
+    color:white;
+    border-radius: 5%;
+    position: fixed;
+    width: 78%;
+}
+
+
+#home{
+    margin-left: 30px;
+
+}
+
+nav .nav-rightside{
+    margin-left: auto;
+}
+
+
+
+nav a{
+    margin-right: 10px;
+    background-color: rgb(43, 126, 126);
+    padding: 5px 5px 5px 5px;
+    border-radius: 10%;
+    color:white;
+}
+
+.contents{
+    margin-top: 80px;
+    padding-top: 15px;
+    padding-left:10px;
+    /* background-color: rgb(13, 14, 14); */
+    margin-left: 150px;
+    margin-right:250px;
+    /* box-shadow: 2px 2px 5px rgba(0,0,0,0.5); */
+
+
+
+
+}
+
+.blue-bg{
+    /* background-color: rgb(90, 90, 165); */
+    background-color: rgb(6, 7, 7);
+    padding-top:15px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    border-radius: 20px;
+    
+
+}
+
+
+.hexchess-content,.future-content,.etc-content{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+
+.hexchess-img,.class-img{
+    width: 186px;
+    height: 186px;
+    border-radius: 14%;
+}
+
+.img-test{
+    width:186;
+    height: auto;
+    margin-left: 50px;
+}
+
+
+.column {
+  text-align: center; /* จัดข้อความกึ่งกลางแนวนอน */
+}
+
+.class-img:hover,.hexchess-img:hover{
+    transform: scale(1.1);
+}
+
+
+.cal-container{
+    display: flex;
+    flex-wrap: wrap;
+    border-color: 1px solid blue;
+}
+
+.cal-elm{
+    background-color: rgb(6, 7, 7);
+    padding: 30px 30px 30px 30px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    width: 100%;
+}
+
+.cal-button{
+    background-color: rgb(158, 255, 134);
+    padding: 4px 15px 4px 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    color:grey;
+    width: 20%;
+
+}
+
+.cal-result{
+    color: lightgreen;
+    font-size: large;
+    margin-left:15px;
+}
+
+.head-topic{
+    background-color: rgb(37, 44, 41);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 15px 0px 15px 10px;
+    margin-top: 30px;
+}
+
+.calm-font{
+    font-family: "Funnel Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 13.5px;
+}

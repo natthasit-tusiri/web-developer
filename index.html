@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+    </style>
+</head>
+
+<body>
+    
+
+
+    <div class="container">
+
+        <div class="left-side" id="left"></div>
+
+
+
+
+        <div class="main">
+        
+            <nav id="navbar"></nav>
+
+            <div class="contents">
+                <div class="blue-bg"><h1><bold>Guide</bold></h1><p>อัพเดทเมื่อวันที่ 02 ตุลาคม 2025</p></div><br><br><br><br><br><br>
+                
+
+                <h2>ไกด์ต่างๆ</h2>
+                <div class="future-content">
+
+
+                    <div class="column">
+                        <a href="damage_formula.html"><img src="imgs/default_pic.jpg" alt="" class="class-img"></a>
+                        <p style="padding-top: 7px;">สูตรคำนวณดาเมจต่างๆ</p><hr>
+                    </div>
+
+                    <div class="right-space"></div>
+
+                   <div class="column">
+                        <a href="damage_calculator.html"><img src="imgs/default_pic.jpg" alt="" class="class-img"></a>
+                        <p style="padding-top: 7px;">คำนวณดาเมจ</p><hr>
+                    </div>
+
+
+                </div>
+
+                <p class="top-space"></p>
+                <h2>ดันหมากรุกเวทย์มนต์</h2>
+                <div class="hexchess-content">
+                    <div class="column">
+                        <a href=""><img src="imgs/hexchess.png" alt="" class="hexchess-img"></a>
+                        <p style="padding-top: 7px;">เมลาเดีย</p><hr>
+                    </div>
+
+                    <div class="right-space"></div>
+
+                    <div class="column">
+                        <a href=""><img src="imgs/hexchess_queen.jpg" alt="" class="hexchess-img"></a>
+                        <p style="padding-top: 7px;">เมลาเดีย</p><hr>
+                    </div>
+
+                      <div class="right-space"></div>
+
+                    <div class="column">
+                         <a href=""><img src="imgs/ToF.png" alt="" class="hexchess-img"></a>
+                         <p style="padding-top: 7px;">เมลาเดีย</p><hr>
+                    </div>
+
+                    
+                </div>
+
+                <p class="top-space"></p><h2>ข้อมูลต่างๆในอนาคตจาก CN</h2>
+                <div class="future-content">
+                    <div class="column">
+                        <a href=""><img src="imgs/class.jpg" alt="" class="class-img"></a>
+                        <p style="padding-top: 7px;">อาชีพ</p><hr>
+                    </div>
+
+                    <div class="right-space"></div>
+                    
+                    <div class="column">
+                        <a href=""><img src="imgs/pets.png" alt="" class="class-img"></a>
+                        <p style="padding-top: 7px;">สัตว์เลี้ยง</p><hr>
+                    </div>
+
+                    <div class="right-space"></div>
+
+                    <div class="column">
+                        <a href=""><img src="imgs/outfits.png" alt="" class="class-img"></a>
+                        <p style="padding-top: 7px;">แฟชั่น</p><hr>
+                    </div>
+
+
+                    <div class="column">
+                        <a href=""><img src="imgs/new_raid.png" alt="" class="class-img"></a>
+                        <p style="padding-top: 7px;">ดันใหม่</p><hr>
+                    </div>
+
+                </div>
+
+
+
+
+                <p class="top-space"></p>
+                <br>
+
+
+                
+
+
+                
+               
+
+
+            </div>
+
+
+
+        
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <script>
+        fetch("sidemenu.html") .then(function(res){
+            console.log(res.url)
+            return res.text()
+        }) .then((html)=>{
+            document.getElementById("left").innerHTML = html;
+            console.log(html)
+            // console.log(document.querySelectorAll('h2'))
+        })
+
+
+        fetch("navbar.html")
+        .then(res=>{return res.text()})
+        .then(html=>{document.getElementById("navbar").innerHTML=html;})
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Itim&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Damage Formura</title>
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="left-side" id="left"></div>
+        
+        <div class="main">
+
+            <nav id="navbar"></nav>
+
+            <div class="contents" style="background-color: rgb(6, 7, 7); border-radius
+            : 30px; padding-bottom: 50px; padding-left: 30px; padding-right: 30px;" >
+                <div class="blue-bg"><h1>Guide</h1><p>อัพเดทเมื่อวันที่ 13 ตุลาคม 2025</p></div><br><br>
+                <h2>NOTE</h2><hr class="hr-normal">
+                <p>ไกด์นี้จะแสดงสูตรคำนวณของดาเมจต่างๆ ข้อมูลสูตรส่วนใหญ่นำมาจากสูตรของ CN ที่เคยทดลองไว้</p>
+
+
+                <div class="head-topic"><h2>สูตรคำนวณดาเมจ</h2></div>
+                <p class="calm-font">Actual DMG = พลังโจมตีจริง * Skill Multiplier% * CDMG% * Elemental DMG % * 
+                    (Skill DMG% + DMG during Resonance%) * DMG Bonus% * * Shield Breaking DMG% *
+                     DMG to Debuff% (Different debuff are multiplied separately) * DMG to Enemy Type + 
+                     Additional DMG (Different element additional DMG are added separately)</p>
+
+
+                <div class="head-topic"><h2>พลังโจมตี</h2></div>
+                <p class="calm-font">PATK shown in Basic Attributes is already calculated in total.<br>
+                    Every 10 Strength increase 1% "STR Increase %".<br>
+                    <br>
+                    Total PATK = PATK * (1 + STR Increase %) * (1 + PATK%)<br>
+                    <br>
+                    For example, if player have PATK +100, 1000 Strength, PATK +10%, the PATK will be 100 * (1 + 100%) * (1 + 10%), resulting in 220 Total PATK.<br>
+                    <br>
+                    Total PATK can be boosted from various sources that states Strength +X, PATK +X%, PATK +X.<br></p>
+
+
+                <div class="head-topic"><h2>ลดการโจมตี</h2></div>
+                <p class="calm-font">Damage Reduction % is calculated from following formula :<br>
+                    Damage Reduction % = Defense / (3000 + Defense)<br>
+                    Where Defense = PDEF * (1 - Physical PEN%)<br>
+                    For example, if player have 3385 PDEF, and got penetrated by 3% Physical PEN, the calculation is (3385 * (1-0.03)) / (3000 + (3385 * (1-0.03))),
+                     resulting in 52.2% Physical DMG Reduction.</p>
+
+                <div class="head-topic"><h2>พลังโจมตีจริง</h2></div>
+                <p class="calm-font">Actual Attack is calculated from following formula :<br>
+                    Actual Attack = Total PATK * (1-Damage Reduction %) + PDEF Shred<br><br>
+
+                    For example, if player have Total PATK of 1000, 2000 PDEF Shred, enemies have 50% DR, the calculation is 1000 * (1 - 50%) + 2000, resulting in 2500 Actual Attack.<br><br>
+
+                    Note: Training Ground have 0 Defense, resulting in 0% DR.<br>
+                    Training Dummy is counted as BOSS unit.</p>
+
+
+                <div class="head-topic"><h2>ตัวคูณสกิล</h2></div>
+                <p class="calm-font">Skill Multiplier is taken from the Skill Page.<br>
+                    This value increase with level, which can be increased from various Skill +1 sources.</p>
+
+
+                <div class="head-topic"><h2>คริติคอลดาเมจ</h2></div>
+                <p class="calm-font">Critical Damage occur when landing a critical hit, increasing the damage multiplicatively.<br>
+                    To make use of this stats, a good critical rate is needed.<br>
+                    Base Critical DMG is 50%, which means 150% of normal DMG.<br>
+                    Critical DMG can be gained through various sources that states CDMG +X%.</p>    
+                    
+                <div class="head-topic"><h2>ดาเมจธาตู</h2></div>
+                <p class="calm-font">Elemental DMG is affected by Elemental ENH points, with ratio of 11 attribute equal to 5% Elemental DMG.<br>
+                    Elemental DMG can be gained through various sources that states Ele ENH +X.<br><br>
+
+                    Ele Res substracts directly from Ele ENH.<br>
+                    Leading us to formula of Ele DMG (%) = (Ele ENH - Ele RES)/2.2.</p> 
+
+                <div class="head-topic"><h2>สกิลดาเมจ</h2></div>
+                <p class="calm-font">Skill DMG can be gained through various sources that states Skill DMG +X%.<br>
+                    Class effect that boost DMG of certain skills also falls into this category.</p> 
+
+                <div class="head-topic"><h2>ดาเมจโบนัส</h2></div>
+                <p class="calm-font">DMG Bonus can be gained through various sources that states DMG Bonus +X%.</p> 
+
+                <div class="head-topic"><h2>ดาเมจประสานพลัง</h2></div>
+                <p class="calm-font">Activating Resonance boost Damage by 20% at minimum and counted additively to Skill DMG and BATK, and can be boosted from various sources that states "DMG During Resonance +X%"</p> 
+
+                <div class="head-topic"><h2>ดาเมจเกราะแตก</h2></div>
+                <p class="calm-font">Breaking Shield boost Damage by 30% at minimum and counted multiplicatively, and can be boosted from various sources that states "DMG During Shield Break +X%"</p> 
+
+                <div class="head-topic"><h2>ดาเมจดีบัฟ</h2></div>
+                <p class="calm-font">Dealing DMG to debuffed enemies (scorched, vulnerable, slowed, exhausted) are counted separately and multiplicatively. <br>
+Below is the formula for it : (1 +DMG to Scorched) * (1 +DMG to Vulnerable) * (1 + DMG to Slowed) * (DMG to Exhausted)</p> 
+
+
+            </div>
+
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+    <script>window.onload = (()=>{nav();sidemenu();statusCalculator()})</script>
+</body>
+</html>
