@@ -80,4 +80,132 @@ function statusCalculator(){
 
     
     // ---------------------------------------------------------------------------------------//
+
+
+
+
+    document.getElementById('critdmg-increase-button').addEventListener('click',()=>{
+        const value1 = document.getElementById('critdmg');
+        const value2 = document.getElementById('critdmg-increase');
+        const baseValue_truePer = Number(value1.value)/100
+        const newValue_truePer = (Number(value2.value)+Number(value1.value))/100
+
+
+        const result = [((1+newValue_truePer)/(1+baseValue_truePer))*100]-100
+        document.getElementById('critdmg-increase-result').textContent = 'ดาเมจเพิ่มขึ้น: '+result.toFixed(2)+'%';
+        value1.value = (Number(value2.value)+Number(value1.value));
+        value2.value = NaN;
+    })
+
+
+
+
+
+
+    document.getElementById('elemental-increase-button').addEventListener('click',()=>{
+        const value1 = document.getElementById('elemental');
+        const value2 = document.getElementById('elemental-increase');
+
+
+        const baseValue_truePer = ((Number(value1.value)/11)*5)/100
+        const increaseValue = ((Number(value2.value)/11)*5)/100
+        const newValue_truePer = (increaseValue+baseValue_truePer)
+
+
+        const result = [((1+newValue_truePer)/(1+baseValue_truePer))*100]-100
+        document.getElementById('elemental-increase-result').textContent = 'ดาเมจเพิ่มขึ้น: '+result.toFixed(2)+'%';
+        value1.value = (Number(value2.value)+Number(value1.value));
+        value2.value = NaN;
+    })
+
+
+
+      document.getElementById('skilldmg-increase-button').addEventListener('click',()=>{
+        const value1 = document.getElementById('skilldmg');
+        const value2 = document.getElementById('skilldmg-increase');
+        const baseValue_truePer = Number(value1.value)/100
+        const newValue_truePer = (Number(value2.value)+Number(value1.value))/100
+
+
+        const result = [((1+newValue_truePer)/(1+baseValue_truePer))*100]-100
+        document.getElementById('skilldmg-increase-result').textContent = 'ดาเมจเพิ่มขึ้น: '+result.toFixed(2)+'%';
+        value1.value = (Number(value2.value)+Number(value1.value));
+        value2.value = NaN;
+    })
+
+
+    document.getElementById('dmgbonus-increase-button').addEventListener('click',()=>{
+        const value1 = document.getElementById('dmgbonus');
+        const value2 = document.getElementById('dmgbonus-increase');
+        const baseValue_truePer = Number(value1.value)/100
+        const newValue_truePer = (Number(value2.value)+Number(value1.value))/100
+
+
+        const result = [((1+newValue_truePer)/(1+baseValue_truePer))*100]-100
+        document.getElementById('dmgbonus-increase-result').textContent = 'ดาเมจเพิ่มขึ้น: '+result.toFixed(2)+'%';
+        value1.value = (Number(value2.value)+Number(value1.value));
+        value2.value = NaN;
+    })
+
+
+    document.getElementById('dmg-to-boss-increase-button').addEventListener('click',()=>{
+        const value1 = document.getElementById('dmg-to-boss');
+        const value2 = document.getElementById('dmg-to-boss-increase');
+        const baseValue_truePer = Number(value1.value)/100
+        const newValue_truePer = (Number(value2.value)+Number(value1.value))/100
+
+
+        const result = [((1+newValue_truePer)/(1+baseValue_truePer))*100]-100
+        document.getElementById('dmg-to-boss-increase-result').textContent = 'ดาเมจเพิ่มขึ้น: '+result.toFixed(2)+'%';
+        value1.value = (Number(value2.value)+Number(value1.value));
+        value2.value = NaN;
+    })
+
+
+
+
+    document.getElementById('shield-break-increase-button').addEventListener('click',()=>{
+        const value1 = document.getElementById('shield-break');
+        const value2 = document.getElementById('shield-break-increase');
+        const baseValue_truePer = (Number(value1.value)/100)
+        const newValue_truePer = (Number(value2.value)+Number(value1.value))/100
+
+
+        const result = [((1+newValue_truePer)/(1+baseValue_truePer))*100]-100
+        document.getElementById('shield-break-increase-result').textContent = 'ดาเมจเพิ่มขึ้น: '+result.toFixed(2)+"%";
+        value1.value = (Number(value2.value)+Number(value1.value));
+        value2.value = NaN;
+    })
+
+
+
+    document.getElementById('resonance-increase-button').addEventListener('click',()=>{
+        const value1 = document.getElementById('resonance');
+        const value2 = document.getElementById('resonance-increase');
+        const baseValue_truePer = Number(value1.value)/100
+        const newValue_truePer = (Number(value2.value)+Number(value1.value))/100
+
+
+        const result = [((1+newValue_truePer)/(1+baseValue_truePer))*100]-100
+        document.getElementById('resonance-increase-result').textContent = 'ดาเมจเพิ่มขึ้น: '+result.toFixed(2)+'%';
+        value1.value = (Number(value2.value)+Number(value1.value));
+        value2.value = NaN;
+    })
+
+
+
+
+    document.getElementById('dmg-to-debuff-increase-button').addEventListener('click',()=>{
+        const value1 = document.getElementById('dmg-to-debuff');
+        const value2 = document.getElementById('dmg-to-debuff-increase');
+        const baseValue_truePer = Number(value1.value)/100
+        const newValue_truePer = (Number(value2.value)+Number(value1.value))/100
+
+
+        const result = [((1+newValue_truePer)/(1+baseValue_truePer))*100]-100
+        document.getElementById('dmg-to-debuff-increase-result').textContent = 'ดาเมจเพิ่มขึ้น: '+result.toFixed(2)+'%';
+        value1.value = (Number(value2.value)+Number(value1.value));
+        value2.value = NaN;
+    })
+
 }
